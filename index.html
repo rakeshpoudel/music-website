@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>music website</title>
+        <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
+
+            <div class="container">
+                <div class="navbar">
+                     <img src="media/logo.jpg" class="logo">
+                     <ul>
+                         <li><a href="#">HOME</a></li>
+                         <li><a href="#">ABOUT</a></li>
+                         <li><a href="#">SPECIFICATIONS</a></li>
+                         <li><a href="#">PRODUCTS</a></li>
+                         <li><a href="#">CONNECT</a></li>
+</ul>
+</div>
+<div class="content">
+    <div class="left-col">
+        <h1>THE<br> REAL<br> SOUND</h1>
+        </div>
+        <div class="right-col">
+            <p> ClicK here to listen</p>
+            <img src="media/play.jpg" id="icon">  
+ 
+        </div>              
+            </div>
+            <audio id="mysong">
+                <source src="media/mp3.mp3" type="audio/mp3">
+            </audio>
+            <script>
+                var mysong = document.getElementById("mysong")
+                var icon = document.getElementById("icon")
+
+                icon.onclick = function(){
+                    if(mysong.paused){
+                        mysong.play();
+                        icon.src="media/pause.jpg";
+                    }else{
+                        mysong.pause();
+                        icon.src="media/play.jpg";
+
+                    }
+                    
+                }
+                </script>
+
+
+
+            </body>
+            </html>
